@@ -10,7 +10,7 @@ class Drone:
         self.keep = True
         self.returning = False
 
-        # a Vector for storing all movements by axises
+        # Vector for storing all movements by axises
         self.movements = {"x": 0, "y": 0} 
     
     """
@@ -65,7 +65,9 @@ class Drone:
                     self.pos["y"] -= self.speed
                     self.movements["y"] -= self.speed
 
-
+    """
+        Start and stop the returning sequence
+    """
     def Return(self):
         while self.keep:
             # Activating and deactivating returning sequence

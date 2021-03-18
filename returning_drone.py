@@ -29,7 +29,5 @@ while running:
             running = False
 
         
-
 drone.Stop()
-
 pygame.quit()
