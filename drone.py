@@ -80,8 +80,18 @@ class Drone:
                 if -1 < self.movements["x"] < 1 and -1 < self.movements["y"] < 1:
                     self.returning = False
                 else:
-                    x_speed = (0 - (self.movements["x"] > 0)) * self.speed
-                    y_speed = (0 - (self.movements["y"] > 0)) * self.speed
+                    """x_speed = (0 - (self.movements["x"] > 0)) * self.speed
+                    y_speed = (0 - (self.movements["y"] > 0)) * self.speed"""
+
+                    if self.movements["x"] > 0:
+                        x_speed = -1 * self.speed
+                    else:
+                        x_speed = +1 * self.speed
+
+                    if self.movements["y"] > 0:
+                        y_speed = -1 * self.speed
+                    else:
+                        y_speed = +1 * self.speed
 
                     self.pos["x"] += x_speed
                     self.movements["x"] += x_speed
