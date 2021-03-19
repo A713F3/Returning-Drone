@@ -16,12 +16,12 @@ while running:
     screen.fill((255, 255, 255))
 
     i += 1
-    if i % 1000 == 0:
-        print(drone.movements)
+    if i % 5000 == 0:
+        print(drone.movements.x, drone.movements.y)
         i = 0
 
     # Draw drone
-    pygame.draw.circle(screen, (0, 0, 255), (drone.pos["x"], drone.pos["y"]), 10)
+    pygame.draw.circle(screen, (0, 0, 255), (drone.pos.x, drone.pos.y), 10)
 
 
     for event in pygame.event.get():
